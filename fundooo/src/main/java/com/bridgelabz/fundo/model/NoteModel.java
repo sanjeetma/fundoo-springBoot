@@ -54,12 +54,10 @@ public class NoteModel {
 	
 	@ManyToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
 	@JoinColumn(name = "noteId")
-
-    List<LabelModel> labelModel;
+	List<LabelModel> labelModel;
 	
 	@JsonIgnore
 	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-
 	private List<UserModel> collabratorUserList;
 	
 }

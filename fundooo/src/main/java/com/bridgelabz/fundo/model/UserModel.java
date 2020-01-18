@@ -61,7 +61,6 @@ public class UserModel {
 	
 	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
 	@JoinColumn(name = "userId")
-//	@JsonBackReference
 	private List<LabelModel> label = new ArrayList<LabelModel>();
 	
 	

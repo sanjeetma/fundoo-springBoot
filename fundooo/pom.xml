@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.bridgelabz</groupId>
-	<artifactId>FunAndDo</artifactId>
+	<artifactId>Fundooo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>FunAndDo</name>
+	<name>Fundooo</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -37,11 +37,11 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-<!-- 		<dependency> -->
-<!-- 			<groupId> org.elasticsearch.client</groupId> -->
-<!-- 			<artifactId>elasticsearch-rest-high-level-client</artifactId> -->
-<!-- 			<version>6.4.3</version> -->
-<!-- 		</dependency> -->
+		<dependency>
+			<groupId> org.elasticsearch.client</groupId>
+			<artifactId>elasticsearch-rest-high-level-client</artifactId>
+			<version>6.4.3</version>
+		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -53,7 +53,8 @@
 			<artifactId>modelmapper</artifactId>
 			<version>2.3.5</version>
 		</dependency>
-		<!-- <dependency> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-activemq</artifactId> 
+		<!-- <dependency> 
+		<groupId>org.springframework.boot</groupId> <artifactId>spring-boot-starter-activemq</artifactId> 
 			</dependency> -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

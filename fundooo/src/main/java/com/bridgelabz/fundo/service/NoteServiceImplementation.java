@@ -45,11 +45,11 @@ public class NoteServiceImplementation implements NoteService {
 	@Autowired
 	private LabelService labelService;
 	
-//	@Autowired
-//	ElasticSearchService elasticSearchService;
+	@Autowired
+	ElasticSearchService elasticSearchService;
 
-	// @Autowired(required=true)
-	// private com.bridgelabz.fundo.model.NoteModel noteModel;
+//	 @Autowired(required=true)
+//	 private com.bridgelabz.fundo.model.NoteModel noteModel;
 
 	@Autowired
 	private com.bridgelabz.fundo.repository.NoteRepository noteRepository;
@@ -64,7 +64,7 @@ public class NoteServiceImplementation implements NoteService {
 			noteModel.setUpdateTime(LocalDateTime.now());
 			userModel.get().getNote().add(noteModel);
 			noteRepository.save(noteModel);
-			//elasticSearchService.createNote(noteModel);
+			elasticSearchService.createNote(noteModel);
 		}
 		return noteModel;
 	}
@@ -104,7 +104,7 @@ public class NoteServiceImplementation implements NoteService {
 		note.get().setDescription(noteModel.getDescription());
 		note.get().setUpdateTime(LocalDateTime.now());
 		noteRepository.save(note.get());
-		//elasticSearchService.updateNote(note.get());
+		elasticSearchService.updateNote(note.get());
 		} else
 		throw new CustomException(104, "Invalid token or user not verified");
 		} else
@@ -149,7 +149,7 @@ public class NoteServiceImplementation implements NoteService {
 			
 			if (noteModel.isPresent()) {
 				noteRepository.deleteById(id);
-				//elasticSearchService.deleteNote(noteModel.get());
+				elasticSearchService.deleteNote(noteModel.get());
 				message = "note deleted";
 			} else {
 				message = "note is not present";

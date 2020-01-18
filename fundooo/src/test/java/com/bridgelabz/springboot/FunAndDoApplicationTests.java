@@ -49,7 +49,7 @@ public class FunAndDoApplicationTests {
 	@Mock
 	private RedisTemplate<Object, Object> redisTemplate;
 	
-	//UserDTO userDto=new UserDTO("vineet","patel","male","mailtovineetpatel@gmail.com","vineet",(long) 1234555676);
+	
 	
 	
 	@Test
