@@ -1,4 +1,4 @@
-/*package com.bridgelabz.springboot;
+package com.bridgelabz.springboot;
 
 import static org.junit.Assert.assertEquals;
 
@@ -63,4 +63,4 @@ public class FunAndDoApplicationTests {
 	}
 
 }
-*/
+
